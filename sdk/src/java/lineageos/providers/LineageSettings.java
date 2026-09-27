@@ -931,6 +931,15 @@ public final class LineageSettings {
                 new InclusiveIntegerRangeValidator(0, 3);
 
         /**
+         * Whether to keep the status bar aligned with the display cutout in every rotation.
+         * 0 = off, 1 = on
+         */
+        public static final String STATUS_BAR_IN_CUTOUT = "status_bar_in_cutout";
+
+        /** @hide */
+        public static final Validator STATUS_BAR_IN_CUTOUT_VALIDATOR = sBooleanValidator;
+
+        /**
          * Whether to hide clock when launcher is visible
          * default: false
          */
@@ -2186,6 +2195,7 @@ public final class LineageSettings {
                     HIGH_TOUCH_SENSITIVITY_ENABLE_VALIDATOR);
             VALIDATORS.put(SYSTEM_PROFILES_ENABLED, SYSTEM_PROFILES_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
+            VALIDATORS.put(STATUS_BAR_IN_CUTOUT, STATUS_BAR_IN_CUTOUT_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK_AUTO_HIDE, STATUS_BAR_CLOCK_AUTO_HIDE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_AM_PM, STATUS_BAR_AM_PM_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_BATTERY_STYLE, STATUS_BAR_BATTERY_STYLE_VALIDATOR);
